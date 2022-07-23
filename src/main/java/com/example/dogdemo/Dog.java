@@ -1,4 +1,4 @@
-package com.example.dogdemo.model;
+package com.example.dogdemo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -9,23 +9,23 @@ import javax.persistence.Id;
 
 @JsonIgnoreProperties(value = {"hibernateLazyInitializer", "handler"})
 @Entity
-
 public class Dog {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     private String name;
-
+    private String breed;
     private Integer age;
 
-    private String breed;
+    public Dog () {}
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
