@@ -1,0 +1,7 @@
+{
+  "name": "dog-demo",
+  "version": "1.0.0",
+  "dependencies": {
+    "next": "^12.1.6"
+  }
+}

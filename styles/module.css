@@ -1,0 +1,29 @@
+.title {
+  color: #333;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.text {
+  color: #171515;
+}
+.btn {
+  display: block;
+  width: 150px;
+  padding: 8px 0;
+  margin: 20px auto;
+  background: #70ff49;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  border: none;
+}
+.single {
+  padding: 2px 16px;
+  background: #fff;
+  display: block;
+  margin: 20px 10px;
+  border-left: 8px solid rgba(255, 255, 255, 0.24);
+}
+.single:hover {
+  border-left: 8px solid #37772e;
+}

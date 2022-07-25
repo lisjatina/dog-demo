@@ -1,11 +1,13 @@
-package com.example.dogdemo;
+package com.example.dogdemo.controller;
 
+import com.example.dogdemo.impl.DogService;
+import com.example.dogdemo.model.Dog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-//@CrossOrigin(origins = "http://localhost:3000", maxAge = 3600)
+@CrossOrigin(origins = "http://localhost:3000", maxAge = 3600)
 @RestController
 @RequestMapping("/api/v1")
 public class DogController {
@@ -13,7 +15,6 @@ public class DogController {
     @Autowired
     private DogService dogService;
 
-    //@CrossOrigin
     @PostMapping("")
     public ResponseEntity<?> createNewDog(@RequestBody Dog dog){
 
@@ -21,7 +22,6 @@ public class DogController {
         return new ResponseEntity<>(newDog, HttpStatus.CREATED);
     }
 
-    //@CrossOrigin
     @GetMapping("/delete/{id}")
     public ResponseEntity<Dog> deleteDogById(@PathVariable long id){
 
@@ -34,7 +34,6 @@ public class DogController {
         }
     }
 
-    //@CrossOrigin
     @GetMapping("/{id}")
     public ResponseEntity<Dog> DogById(@PathVariable long id){
 
@@ -46,7 +45,6 @@ public class DogController {
         }
     }
 
-    //@CrossOrigin
     @GetMapping("/list")
     public ResponseEntity<Iterable<Dog>> getAllDogs(){
         Iterable<Dog> dogsList = dogService.findAllDogs();

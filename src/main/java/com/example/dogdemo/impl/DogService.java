@@ -1,10 +1,13 @@
-package com.example.dogdemo;
+package com.example.dogdemo.impl;
 
+import com.example.dogdemo.model.Dog;
+import com.example.dogdemo.repo.DogRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class DogService {
+
     @Autowired
     private DogRepository dogRepository;
 
